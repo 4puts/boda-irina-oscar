@@ -1059,6 +1059,9 @@
         <button id="btnMusica" class="float-btn" title="Reproducir / Pausar Música">
             <i id="iconoMusica" class="fa-solid fa-music"></i>
         </button>
+        <a href="https://wa.me/526941083410" target="_blank" class="float-btn" title="Contactar por WhatsApp" style="color: #25D366;">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
         <a href="#rsvp" class="float-btn" title="Confirmar Asistencia">
             <i class="fa-solid fa-check"></i>
         </a>
@@ -1379,6 +1382,9 @@
                 <button type="submit" class="btn-confirmar-wsp">
                     <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Confirmar por WhatsApp
                 </button>
+                <p style="font-size: 0.85rem; color: var(--color-texto-muted); margin-top: 14px;">
+                    ¿Dudas o comentarios? Contáctanos al <a href="https://wa.me/526941083410" target="_blank" style="color: var(--color-oliva-dark); font-weight: 600; text-decoration: none;"><i class="fa-brands fa-whatsapp"></i> 694 108 3410</a>
+                </p>
             </form>
         </div>
     </section>
@@ -1505,7 +1511,7 @@
                 texto += `Mensaje: "${mensaje}"\n`;
             }
 
-            const urlWsp = `https://api.whatsapp.com/send?text=${encodeURIComponent(texto)}`;
+            const urlWsp = `https://api.whatsapp.com/send?phone=526941083410&text=${encodeURIComponent(texto)}`;
             window.open(urlWsp, '_blank');
         }
     </script>
