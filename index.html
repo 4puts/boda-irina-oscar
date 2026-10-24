@@ -1233,39 +1233,6 @@
         </div>
     </section>
 
-    <!-- ================= GALERÍA ================= -->
-    <section class="section-padding" style="background-color: #faf9f6;">
-        <div class="section-header">
-            <span class="section-subtitle">Momentos</span>
-            <h2 class="section-title">Nuestra Historia</h2>
-            <div class="olive-branch-dec"></div>
-        </div>
-
-        <div class="galeria-grid">
-            <div class="galeria-item" onclick="abrirLightbox('assets/img/FOTOSg1.jpg')">
-                <img src="assets/img/FOTOSg1.jpg" alt="Foto Novios 1">
-                <div class="galeria-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-            </div>
-            <div class="galeria-item" onclick="abrirLightbox('assets/img/FOTOSg2.jpg')">
-                <img src="assets/img/FOTOSg2.jpg" alt="Foto Novios 2">
-                <div class="galeria-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-            </div>
-            <div class="galeria-item" onclick="abrirLightbox('assets/img/FOTOSg3.jpg')">
-                <img src="assets/img/FOTOSg3.jpg" alt="Foto Novios 3">
-                <div class="galeria-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-            </div>
-            <div class="galeria-item" onclick="abrirLightbox('assets/img/FOTOSg4.jpg')">
-                <img src="assets/img/FOTOSg4.jpg" alt="Foto Novios 4">
-                <div class="galeria-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LIGHTBOX MODAL -->
-    <div id="lightboxModal" class="lightbox-modal" onclick="cerrarLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightboxImg" src="" alt="Vista previa">
-    </div>
 
     <!-- ================= MESA DE REGALOS ================= -->
     <section class="section-padding" id="regalos">
@@ -1478,19 +1445,6 @@
         }
         setInterval(actualizarContador, 1000);
         actualizarContador();
-
-        // 3. Lightbox Galería
-        const lightboxModal = document.getElementById('lightboxModal');
-        const lightboxImg = document.getElementById('lightboxImg');
-
-        function abrirLightbox(src) {
-            lightboxImg.src = src;
-            lightboxModal.classList.add('active');
-        }
-
-        function cerrarLightbox() {
-            lightboxModal.classList.remove('active');
-        }
 
         // 4. Modal Datos Bancarios
         const modalBanco = document.getElementById('modalBanco');
