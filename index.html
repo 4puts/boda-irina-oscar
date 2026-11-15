@@ -249,7 +249,7 @@
             justify-content: center;
             text-align: center;
             background: linear-gradient(rgba(20, 25, 15, 0.42), rgba(20, 25, 15, 0.42)), 
-                        url('assets/img/IMAGEN-HEADERport.jpg') center/cover no-repeat;
+                        url('assets/img/IMAGEN-HEADERport-pc.jpg') center/cover no-repeat;
             color: #ffffff;
             padding: 40px 20px;
         }
@@ -645,34 +645,71 @@
             margin-right: auto;
         }
 
-        .paleta-colores {
+        /* ================= SECCIÓN PADRES Y PADRINOS ================= */
+        .familia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 860px;
+            margin: auto;
+        }
+
+        .familia-card {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(106, 112, 76, 0.12);
+            transition: all 0.35s ease;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            gap: 15px;
             align-items: center;
-            margin-top: 20px;
         }
 
-        .color-dot {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.25s ease;
+        .familia-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
-        .color-dot:hover {
-            transform: scale(1.15);
+        .familia-icono {
+            font-size: 1.7rem;
+            color: var(--color-oliva);
+            margin-bottom: 12px;
         }
 
-        .paleta-label {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 15px;
-            letter-spacing: 1px;
+        .familia-rol {
+            font-family: var(--font-elegante);
+            font-size: 1.3rem;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-oliva-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .familia-divider {
+            width: 50px;
+            height: 1.5px;
+            background: var(--color-dorado-suave);
+            margin: 0 auto 16px;
+        }
+
+        .familia-nombre {
+            font-family: var(--font-caligrafica);
+            font-size: 2.1rem;
+            color: var(--color-texto);
+            line-height: 1.25;
+            margin-bottom: 4px;
+        }
+
+        .familia-ampersand {
+            font-family: var(--font-elegante);
+            font-size: 1.3rem;
+            color: var(--color-oliva);
+            margin: 4px 0;
+            font-style: italic;
         }
 
         /* ================= GALERÍA DE FOTOS ================= */
@@ -751,110 +788,6 @@
             color: #fff;
             font-size: 2rem;
             cursor: pointer;
-        }
-
-        /* ================= REGALOS ================= */
-        .regalos-container {
-            max-width: 750px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .regalo-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: var(--shadow-card);
-            border: 1px solid rgba(106, 112, 76, 0.12);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .regalo-icon-img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin: 0 auto 15px;
-        }
-
-        .regalo-title {
-            font-family: var(--font-elegante);
-            font-size: 1.45rem;
-            color: var(--color-oliva-dark);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .regalo-text {
-            color: var(--color-texto-muted);
-            font-size: 0.92rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        /* Modal datos bancarios */
-        .modal-banco {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.65);
-            backdrop-filter: blur(5px);
-            z-index: 999999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .modal-banco.activo {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-banco-content {
-            background: #ffffff;
-            border-radius: 22px;
-            padding: 35px 25px;
-            max-width: 440px;
-            width: 100%;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-            text-align: center;
-            position: relative;
-        }
-
-        .banco-item {
-            background: var(--color-oliva-soft);
-            padding: 12px 16px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            text-align: left;
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .btn-copiar {
-            background: var(--color-oliva);
-            color: #fff;
-            border: none;
-            padding: 5px 12px;
-            border-radius: 8px;
-            font-size: 0.78rem;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .btn-copiar:hover {
-            background: var(--color-oliva-dark);
         }
 
         /* ================= CONFIRMACIÓN (RSVP) ================= */
@@ -1008,7 +941,8 @@
         /* ================= RESPONSIVE ================= */
         @media (max-width: 768px) {
             .hero {
-                background-position: center 8%;
+                background: linear-gradient(rgba(20, 25, 15, 0.42), rgba(20, 25, 15, 0.42)), 
+                            url('assets/img/IMAGEN-HEADERport-mobile.jpg') center 8%/cover no-repeat;
                 padding: 140px 15px 50px;
                 align-items: flex-end;
             }
@@ -1147,6 +1081,66 @@
         </div>
     </section>
 
+    <!-- ================= NUESTROS PADRES ================= -->
+    <section class="section-padding" id="padres">
+        <div class="section-header">
+            <span class="section-subtitle">Con la bendición de Dios y</span>
+            <h2 class="section-title">Nuestros Padres</h2>
+            <div class="olive-branch-dec"></div>
+        </div>
+
+        <div class="familia-grid">
+            <!-- Padres del Novio -->
+            <div class="familia-card">
+                <div class="familia-icono"><i class="fa-solid fa-heart"></i></div>
+                <div class="familia-rol">Padres del Novio</div>
+                <div class="familia-divider"></div>
+                <p class="familia-nombre">Teodoro Oleta Bastidas</p>
+                <p class="familia-ampersand">&</p>
+                <p class="familia-nombre">Victoria Gaytan Ulloa</p>
+            </div>
+
+            <!-- Padres de la Novia -->
+            <div class="familia-card">
+                <div class="familia-icono"><i class="fa-solid fa-heart"></i></div>
+                <div class="familia-rol">Padres de la Novia</div>
+                <div class="familia-divider"></div>
+                <p class="familia-nombre">Ma. del Rosario Gonzalez Sibrian</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= NUESTROS PADRINOS ================= -->
+    <section class="section-padding" id="padrinos" style="background-color: #faf9f6;">
+        <div class="section-header">
+            <span class="section-subtitle">Con el aprecio y cariño de</span>
+            <h2 class="section-title">Nuestros Padrinos</h2>
+            <div class="olive-branch-dec"></div>
+        </div>
+
+        <div class="familia-grid">
+            <!-- Padrinos de Velación -->
+            <div class="familia-card">
+                <div class="familia-icono"><i class="fa-solid fa-ring"></i></div>
+                <div class="familia-rol">Padrinos de Velación</div>
+                <div class="familia-divider"></div>
+                <p class="familia-nombre">Maria del Rosario Osuna Martinez</p>
+                <p class="familia-ampersand">&</p>
+                <p class="familia-nombre">Jose Ernesto Oleta Gaytan</p>
+            </div>
+
+            <!-- Padrinos de Boda -->
+            <div class="familia-card">
+                <div class="familia-icono"><i class="fa-solid fa-champagne-glasses"></i></div>
+                <div class="familia-rol">Padrinos de Boda</div>
+                <div class="familia-divider"></div>
+                <p class="familia-nombre">Hildeliza Meza Oleta</p>
+                <p class="familia-ampersand">&</p>
+                <p class="familia-nombre">Miguel Angel Medrano Hernandez</p>
+            </div>
+        </div>
+    </section>
+
     <!-- ================= DÓNDE & CUÁNDO ================= -->
     <section class="section-padding" id="lugares">
         <div class="section-header">
@@ -1159,15 +1153,15 @@
             <!-- Ceremonia Religiosa -->
             <div class="card-evento">
                 <div class="card-img-wrap">
-                    <img src="assets/img/CEREMONIA1-IMGcere.jpg" alt="Santuario de la Virgen del Rosario" style="object-position: center;">
+                    <img src="assets/img/CEREMONIA1-IMGcere.jpg" alt="Santuario de Nuestra Señora del Rosario" style="object-position: center;">
                 </div>
                 <div class="card-body">
                     <div>
                         <div class="card-tipo">Ceremonia Religiosa</div>
-                        <h3 class="card-lugar">Santuario de la Virgen del Rosario</h3>
+                        <h3 class="card-lugar">Santuario de Nuestra Señora del Rosario</h3>
                         <div class="card-info">
                             <p><i class="fa-regular fa-calendar"></i> <strong>Fecha:</strong> Sábado, 26 de Diciembre de 2026</p>
-                            <p><i class="fa-regular fa-clock"></i> <strong>Hora:</strong> 17:00 hrs</p>
+                            <p><i class="fa-regular fa-clock"></i> <strong>Misa:</strong> 6:00 P.M. (18:00 hrs)</p>
                             <p><i class="fa-solid fa-location-dot"></i> Calle Mariano Escobedo, Genaro Estrada, 82802 El Rosario, Sin.</p>
                         </div>
                     </div>
@@ -1180,15 +1174,15 @@
             <!-- Recepción & Fiesta -->
             <div class="card-evento">
                 <div class="card-img-wrap">
-                    <img src="assets/img/CEREMONIA2-IMGrecep.jpg" alt="Club de Leones de El Rosario A.C.">
+                    <img src="assets/img/CEREMONIA2-IMGrecep.jpg" alt="Salón Club de Leones A.C.">
                 </div>
                 <div class="card-body">
                     <div>
-                        <div class="card-tipo">Recepción & Fiesta</div>
-                        <h3 class="card-lugar">Club de Leones de El Rosario A.C.</h3>
+                        <div class="card-tipo">Recepción</div>
+                        <h3 class="card-lugar">Salón Club de Leones A.C.</h3>
                         <div class="card-info">
                             <p><i class="fa-regular fa-calendar"></i> <strong>Fecha:</strong> Sábado, 26 de Diciembre de 2026</p>
-                            <p><i class="fa-regular fa-clock"></i> <strong>Hora:</strong> 19:00 hrs</p>
+                            <p><i class="fa-regular fa-clock"></i> <strong>Hora:</strong> 8:30 P.M. (20:30 hrs)</p>
                             <p><i class="fa-solid fa-location-dot"></i> Luis Donaldo Colosio Murrieta S/N, Panteón, 82802 El Rosario, Sin.</p>
                         </div>
                     </div>
@@ -1211,7 +1205,7 @@
         <div class="timeline-container">
             <div class="timeline-item">
                 <div class="timeline-box">
-                    <div class="timeline-time">17:00 hrs</div>
+                    <div class="timeline-time">6:00 P.M. (18:00 hrs)</div>
                     <div class="timeline-desc">Ceremonia Religiosa</div>
                 </div>
                 <div class="timeline-center-icon"><i class="fa-solid fa-church"></i></div>
@@ -1220,8 +1214,8 @@
 
             <div class="timeline-item">
                 <div class="timeline-box">
-                    <div class="timeline-time">18:30 hrs</div>
-                    <div class="timeline-desc">Cóctel de Bienvenida</div>
+                    <div class="timeline-time">8:30 P.M. (20:30 hrs)</div>
+                    <div class="timeline-desc">Recepción & Fiesta</div>
                 </div>
                 <div class="timeline-center-icon"><i class="fa-solid fa-martini-glass-citrus"></i></div>
                 <div style="width: 44%;"></div>
@@ -1229,7 +1223,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-box">
-                    <div class="timeline-time">19:30 hrs</div>
+                    <div class="timeline-time">9:15 P.M. (21:15 hrs)</div>
                     <div class="timeline-desc">Entrada de Novios y Cena</div>
                 </div>
                 <div class="timeline-center-icon"><i class="fa-solid fa-utensils"></i></div>
@@ -1238,7 +1232,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-box">
-                    <div class="timeline-time">21:00 hrs</div>
+                    <div class="timeline-time">10:15 P.M. (22:15 hrs)</div>
                     <div class="timeline-desc">Vals de Novios y Brindis</div>
                 </div>
                 <div class="timeline-center-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
@@ -1247,7 +1241,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-box">
-                    <div class="timeline-time">22:00 hrs</div>
+                    <div class="timeline-time">10:45 P.M. (22:45 hrs)</div>
                     <div class="timeline-desc">¡A bailar y celebrar!</div>
                 </div>
                 <div class="timeline-center-icon"><i class="fa-solid fa-music"></i></div>
@@ -1270,96 +1264,8 @@
             <p class="dresscode-text">
                 Traje oscuro o formal para caballeros y vestido largo o de fiesta para damas. Agradecemos reservar el color blanco exclusivamente para la novia.
             </p>
-
-            <div class="paleta-colores">
-                <div class="color-dot" style="background-color: #555e3a;" title="Verde Oliva Oscuro"></div>
-                <div class="color-dot" style="background-color: #8a936a;" title="Verde Salvia"></div>
-                <div class="color-dot" style="background-color: #d8caa8;" title="Beige / Champaña"></div>
-                <div class="color-dot" style="background-color: #9e8f82;" title="Taupe Suave"></div>
-            </div>
-            <div class="paleta-label">Colores Sugeridos</div>
         </div>
     </section>
-
-
-    <!-- ================= MESA DE REGALOS ================= -->
-    <section class="section-padding" id="regalos">
-        <div class="section-header">
-            <span class="section-subtitle">Detalles</span>
-            <h2 class="section-title">Mesa de Regalos</h2>
-            <div class="olive-branch-dec"></div>
-        </div>
-
-        <div class="regalos-container">
-            <!-- Sobre / Lluvia de Sobres -->
-            <div class="regalo-card">
-                <div>
-                    <img src="assets/img/REGALO2-IMGsobre.png" alt="Lluvia de sobres" class="regalo-icon-img">
-                    <h3 class="regalo-title">Lluvia de Sobres</h3>
-                    <p class="regalo-text">
-                        Su presencia es nuestro regalo más preciado. Si desean tener un detalle con nosotros, dispondremos de un buzón especial para sobres el día del evento.
-                    </p>
-                </div>
-                <button class="btn-card" onclick="abrirModalBanco()">
-                    <i class="fa-solid fa-building-columns"></i> Datos Bancarios
-                </button>
-            </div>
-
-            <!-- Tienda Departamental -->
-            <div class="regalo-card">
-                <div>
-                    <img src="assets/img/REGALO1-IMGliver.png" alt="Mesa de Regalos" class="regalo-icon-img">
-                    <h3 class="regalo-title">Mesa de Regalos</h3>
-                    <p class="regalo-text">
-                        También contamos con una mesa de regalos registrada en Liverpool. Pueden buscarla con nuestro evento o número de referencia.
-                    </p>
-                </div>
-                <a href="https://mesaderegalos.liverpool.com.mx/" target="_blank" class="btn-card">
-                    <i class="fa-solid fa-gift"></i> Ver Tienda
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- MODAL DATOS BANCARIOS -->
-    <div id="modalBanco" class="modal-banco" onclick="cerrarModalBanco(event)">
-        <div class="modal-banco-content" onclick="event.stopPropagation()">
-            <h3 style="font-family: var(--font-elegante); font-size: 1.6rem; color: var(--color-oliva-dark); margin-bottom: 20px;">
-                Datos para Transferencia
-            </h3>
-            
-            <div class="banco-item">
-                <div>
-                    <strong>Banco:</strong> BBVA Bancomer<br>
-                    <strong>Titular:</strong> Irina & Oscar
-                </div>
-            </div>
-
-            <div class="banco-item">
-                <div>
-                    <strong>CLABE:</strong><br>
-                    <span id="clabeNum">012180015678912345</span>
-                </div>
-                <button class="btn-copiar" onclick="copiarTexto('012180015678912345', this)">
-                    <i class="fa-regular fa-copy"></i> Copiar
-                </button>
-            </div>
-
-            <div class="banco-item">
-                <div>
-                    <strong>Cuenta:</strong><br>
-                    <span id="cuentaNum">1567891234</span>
-                </div>
-                <button class="btn-copiar" onclick="copiarTexto('1567891234', this)">
-                    <i class="fa-regular fa-copy"></i> Copiar
-                </button>
-            </div>
-
-            <button class="btn-card" style="margin-top: 15px;" onclick="cerrarModalBancoDirecto()">
-                Cerrar
-            </button>
-        </div>
-    </div>
 
     <!-- ================= CONFIRMAR ASISTENCIA (RSVP) ================= -->
     <section class="section-padding rsvp-section" id="rsvp">
@@ -1471,7 +1377,7 @@
         });
 
         // 2. Cuenta Regresiva
-        const fechaBoda = new Date('2026-12-26T17:00:00').getTime();
+        const fechaBoda = new Date('2026-12-26T18:00:00').getTime();
 
         function actualizarContador() {
             const ahora = new Date().getTime();
@@ -1497,34 +1403,7 @@
         setInterval(actualizarContador, 1000);
         actualizarContador();
 
-        // 4. Modal Datos Bancarios
-        const modalBanco = document.getElementById('modalBanco');
-
-        function abrirModalBanco() {
-            modalBanco.classList.add('activo');
-        }
-
-        function cerrarModalBanco(e) {
-            if (e.target === modalBanco) {
-                modalBanco.classList.remove('activo');
-            }
-        }
-
-        function cerrarModalBancoDirecto() {
-            modalBanco.classList.remove('activo');
-        }
-
-        function copiarTexto(texto, btn) {
-            navigator.clipboard.writeText(texto).then(() => {
-                const originalHtml = btn.innerHTML;
-                btn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Copiado!';
-                setTimeout(() => {
-                    btn.innerHTML = originalHtml;
-                }, 2000);
-            });
-        }
-
-        // 5. Enviar confirmación por WhatsApp
+        // 3. Enviar confirmación por WhatsApp
         function enviarWhatsApp(e) {
             e.preventDefault();
             const nombre = document.getElementById('nombreInvitado').value.trim();
